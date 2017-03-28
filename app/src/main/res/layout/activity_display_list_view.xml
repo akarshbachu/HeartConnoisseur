@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_display_list_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="akarshb.heartconnoisseur.DisplayListView">
+    <TextView
+        android:id="@+id/avg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Avg:"/>
+    <TextView
+        android:layout_toRightOf="@id/avg"
+        android:text="Raw data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rawdata"
+        />
+    <TextView
+        android:id="@+id/peakval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Abnormal val"/>
+    <TextView
+        android:id="@+id/Highest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High: "
+        android:layout_toLeftOf="@id/peakval"/>
+
+    <ListView
+        android:layout_below="@id/rawdata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_item"/>
+</RelativeLayout>
