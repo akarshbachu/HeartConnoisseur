@@ -10,18 +10,32 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="akarshb.heartconnoisseur.MainActivity">
 
-    <Button
+    <ImageButton
         android:id="@+id/parsejson"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="HeartRate"
-        />
-    <Button
+        android:background="@drawable/heartbeat_home_final"
+        android:layout_above="@+id/loc"
+        android:layout_alignLeft="@+id/loc"
+        android:layout_alignStart="@+id/loc"
+        android:layout_marginBottom="17dp" />
+    <ImageButton
         android:id="@+id/loc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Location"
-        android:layout_toRightOf="@id/parsejson"/>
+        android:background="@drawable/navigation"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+    <ImageButton
+        android:id="@+id/about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/about_img"
+        android:layout_below="@+id/loc"
+        android:layout_alignLeft="@+id/loc"
+        android:layout_alignStart="@+id/loc"
+        android:layout_marginTop="18dp" />
 
     <TextView
         android:id="@+id/tvdata"

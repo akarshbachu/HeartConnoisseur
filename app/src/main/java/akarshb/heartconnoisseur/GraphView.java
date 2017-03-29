@@ -22,7 +22,7 @@ public class GraphView extends AppCompatActivity {
         graph.getViewport().setScalable(true); // enables horizontal zooming and scrolling
         graph.getViewport().setScalableY(true); // enables vertical zooming and scrolling
         series=new LineGraphSeries<com.jjoe64.graphview.series.DataPoint>();
-        int yAxis[]=new int[]{73,75,76,75,78,79,78,79,78,79,78,76,77,79,78};
+        int yAxis[]=new int[]{73,75,76,77,78,78,77,79,78,79,78,77,78,79,78};
         int xAxis[]=new int[]{2,4,6,8,10,12,14,16,18,20,22,24,26,28,30};
         for(int i=0;i<15;i++){
             x= xAxis[i];

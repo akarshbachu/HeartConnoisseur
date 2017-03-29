@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -18,7 +19,7 @@ public class DisplayListView extends AppCompatActivity {
     String json_result;
     ParametersAdapter parametersAdapter;
     ListView listView;
-    Button graph;
+    ImageButton graph;
     TextView tvRawData,highValue;
     int count=0,sum=0,tempMax=0,max=0,heartRate=0;
     String param1="",param2="";
@@ -29,7 +30,7 @@ public class DisplayListView extends AppCompatActivity {
         setContentView(R.layout.activity_display_list_view);
         tvRawData=(TextView)findViewById(R.id.rawdata);
         highValue=(TextView)findViewById(R.id.peakval);
-        graph=(Button)findViewById(R.id.graph);
+        graph=(ImageButton)findViewById(R.id.graph);
         listView=(ListView)findViewById(R.id.list_item);
         parametersAdapter=new ParametersAdapter(this,R.layout.row_layout);
         graph.setOnClickListener(new View.OnClickListener() {

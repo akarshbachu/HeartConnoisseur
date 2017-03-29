@@ -34,12 +34,14 @@
         android:text="High: "
         android:layout_toLeftOf="@id/peakval"/>
 
-    <Button
+
+    <ImageButton
         android:id="@+id/graph"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Graph" />
+        android:text="Graph"
+        android:background="@drawable/heartbeat"/>
     <ListView
         android:layout_below="@id/graph"
         android:layout_width="match_parent"

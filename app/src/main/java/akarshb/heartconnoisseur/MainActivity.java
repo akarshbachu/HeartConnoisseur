@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,14 +38,15 @@ import java.net.URL;
 public class MainActivity extends AppCompatActivity {
 
     String json_result;
-    Button parseJson,location;
+    ImageButton parseJson,location,about;
     public TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        parseJson=(Button)findViewById(R.id.parsejson);
-        location=(Button)findViewById(R.id.loc);
+        parseJson=(ImageButton) findViewById(R.id.parsejson);
+        location=(ImageButton) findViewById(R.id.loc);
+        about=(ImageButton)findViewById(R.id.about);
         tv=(TextView) findViewById(R.id.tvdata);
         //json data will be loaded in background asynchronously
         new BackgroundTask().execute();
@@ -65,6 +67,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i=new Intent(MainActivity.this,Map.class);
+                startActivity(i);
+            }
+        });
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(MainActivity.this,About.class);
                 startActivity(i);
             }
         });
