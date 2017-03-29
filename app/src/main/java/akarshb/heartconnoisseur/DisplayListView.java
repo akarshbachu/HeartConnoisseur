@@ -1,7 +1,10 @@
 package akarshb.heartconnoisseur;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -15,6 +18,7 @@ public class DisplayListView extends AppCompatActivity {
     String json_result;
     ParametersAdapter parametersAdapter;
     ListView listView;
+    Button graph;
     TextView tvRawData,highValue;
     int count=0,sum=0,tempMax=0,max=0,heartRate=0;
     String param1="",param2="";
@@ -25,9 +29,16 @@ public class DisplayListView extends AppCompatActivity {
         setContentView(R.layout.activity_display_list_view);
         tvRawData=(TextView)findViewById(R.id.rawdata);
         highValue=(TextView)findViewById(R.id.peakval);
+        graph=(Button)findViewById(R.id.graph);
         listView=(ListView)findViewById(R.id.list_item);
         parametersAdapter=new ParametersAdapter(this,R.layout.row_layout);
-
+        graph.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(DisplayListView.this,GraphView.class);
+                startActivity(i);
+            }
+        });
         listView.setAdapter(parametersAdapter);
         json_result=getIntent().getExtras().getString("Json data");//its the key which we have mentioned in main activity in putExtras()
         try {

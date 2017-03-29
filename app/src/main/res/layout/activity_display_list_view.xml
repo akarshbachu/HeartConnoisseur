@@ -34,9 +34,17 @@
         android:text="High: "
         android:layout_toLeftOf="@id/peakval"/>
 
+    <Button
+        android:id="@+id/graph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Graph" />
     <ListView
-        android:layout_below="@id/rawdata"
+        android:layout_below="@id/graph"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/list_item"/>
+
+
 </RelativeLayout>
